@@ -3,11 +3,29 @@
 <html lang="en">
 
 <head>
+    <script>
+        function onButtonClick() {
+            const iframe = document.getElementById('myIframe');
+          
+          const newUrl = iframe.contentWindow.location.href;
+          window.open(newUrl, '_blank');
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById('myButton').addEventListener('click', onButtonClick);
+    });
+          </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
     <style>
+        
+        span {
+  width: 10px;
+  height: 50px;
+  background: rgb(42,43,51);
+}
          .rounded-iframe {
             
             border: none;
@@ -22,7 +40,7 @@
     justify-content: center;
 			width: 100%;
             height: 100vh;
-			background-color: white;
+			background-color: rgb(42,43,51);
 			padding:0px;
 		}
         ::-webkit-scrollbar {
@@ -38,12 +56,17 @@ html, body {
 	</style>
 </head>
 
-<body>
+<body style="background-color:rgb(42,43,51);">
     <div class="center">
-        <iframe src="https://chat.openai.com/chat" class="rounded-iframe"></iframe>
-        <iframe src="http://www.google.com/custom?q=&btnG=Search" class="rounded-iframe"></iframe>
+        <!-- <button id="myButton">Open in New Tab</button> -->
+        <iframe src="https://chat.openai.com/chat?" class="rounded-iframe"></iframe>
+        <span>
+        </span>
+        <iframe id="myIframe" src="http://www.google.com/custom?q=&btnG=Search" class="rounded-iframe"></iframe>
     </div>
+
    
 </body>
+
 
 </html>

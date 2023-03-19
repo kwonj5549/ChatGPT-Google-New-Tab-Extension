@@ -13,7 +13,7 @@
   },
  
  
-  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-9FnFCzW8/BZW15t8okw0RK2wns3F9FTk6yO7L/Tb3Js='; object-src 'self'",
   "permissions": ["storage", "cookies","webRequest", "webRequestBlocking", "\u003Call_urls>"]
 }
 
